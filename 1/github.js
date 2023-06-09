@@ -8,5 +8,11 @@
 // 3 => creating origin "folder"
 // git remote add origin "path"
 
-// 4
+// 4 => fayllarni clouddagi papkaga yuklaydi
 // git add .
+
+// 5 => commit
+// git commit -m "xabar"
+
+// 6 => push
+// git push origin master 
