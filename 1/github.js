@@ -16,3 +16,10 @@
 
 // 6 => push
 // git push origin master 
+
+// 7 => branch
+// git branch branchName => yangi branch qo'shish
+// git checkout branchName => biz istagan branchga o'tish
+
+// 8 => test
+// Bu code test branch idan qo'shildi
