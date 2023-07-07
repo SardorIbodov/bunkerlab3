@@ -251,3 +251,20 @@
 // const arr1 = Array.from("12345", (v) => v * 2);
 // const arr2 = Array.from([1,2,3], (v) => v + 1)
 // console.log(arr2);
+
+//! Homework
+// let users = [
+//   { id: 1, year: 1998, engine: 1, name: "Tico" },
+//   { id: 2, year: 2005, engine: 1.2, name: "Matiz" },
+//   { id: 3, year: 2010, engine: 1.6, name: "Gentra" },
+//   { id: 4, year: 2010, engine: 1.5, name: "Cobalt" },
+//   { id: 5, year: 2012, engine: 2, name: "Malibu" },
+//   { id: 6, year: 2000, engine: 1.2, name: "Damas" },
+//   { id: 7, year: 2018, engine: 2.4, name: "Trackers" },
+// ];
+// let result = users.map(item => {
+// 	if(item.year >= 2000 && item.year <= 2010) {
+// 		return {...item, status: "o'rta"}
+// 	} return item;
+// })
+// console.log(result);
