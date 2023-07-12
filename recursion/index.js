@@ -28,7 +28,7 @@
 // }
 // console.log(factorial(5));
 
-//! let company = {
+// let company = {
 //   sales: [
 //     { name: "John", salary: 1000 },
 //     { name: "Alice", salary: 1600 },
@@ -41,3 +41,19 @@
 //     internals: [{ name: "Jack", salary: 1300 }],
 //   },
 // };
+
+// const getTotalSalary = company => {
+// 	if(Array.isArray(company)) {
+// 		return company.reduce((v, c) => v + c.salary, 0);
+// 	}
+// 	else {
+// 		let sum = 0;
+// 		for(let child of Object.values(company)) {
+// 			sum += getTotalSalary(child); // sum += getTotalSalary(sales) + getTotalSalary(development)
+// 		} // sum += 1000 + 1600 + getTotalSalary(sites) + getTotalSalary(internals)
+// 		// sum += 1000 + 1600 + 2000 + 1800 + 1300
+// 		// sum += 7700
+// 		return sum;
+// 	}
+// }
+// console.log(getTotalSalary(company));
