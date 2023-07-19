@@ -91,3 +91,94 @@
 // }
 // let myObj = new creatingObject();
 // console.log(myObj);
+
+//! Homework
+// sum(a)(b) => a + b
+// const sum = (a) => {
+//   return (b) => {
+//     if (b) return sum(a + b);
+//     else return a;
+//   };
+// };
+// console.log(sum(5)(-1)(2)());
+// console.log(sum(6)(-1)(-2)(-3)());
+// console.log(sum(0)(1)(2)(3)(4)(5)());
+
+// function getData() {
+//   a = 10;
+// }
+// getData();
+// console.log(a);
+
+// console.log(a);
+// let a = 10;
+
+// function getData() {
+//   globalThis.a = 10;
+// }
+// getData();
+// console.log(globalThis, a);
+
+// (function getData() {
+// 	let a = 1;
+// 	var b = 2;
+// 	globalThis.c = 3;
+// })()
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+// const getData = function dataGet() {
+// 	console.log("salom");
+// }
+// getData()
+// dataGet()
+
+// let sayHi = setTimeout(() => {
+//   console.log("salom");
+// }, 1000);
+// let sayHi = setInterval(() => {
+//   console.log("salom");
+// }, 1000);
+// setTimeout(() => {
+// 	clearInterval(sayHi)
+// }, 5000)
+
+// console.log(1);
+// setTimeout(() => {
+// 	console.log(2);
+// }, 2000)
+// console.log(3);
+
+// console.log(1); // 1
+// for(let i = 2; i <= 1000; i++) {
+// 	console.log(i);
+// } // 2
+// setTimeout(() => {
+// 	console.log(1001);
+// }, 1000) // 4
+// console.log(1002); // 3
+
+// console.log(1);
+// setTimeout(() => {
+// 	console.log(2);
+// }, 0)
+// console.log(3);
+
+// console.log(1);
+// console.log(2);
+// console.log(3);
+
+//! Event loop
+// setTimeout(() => {
+// 	console.log(1);
+// }, 1000)
+// setTimeout(() => {
+// 	console.log(2);
+// }, 800)
+// setTimeout(() => {
+// 	console.log(3);
+// }, 750)
+// setTimeout(() => {
+// 	console.log(4);
+// }, 500)
