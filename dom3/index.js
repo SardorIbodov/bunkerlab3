@@ -24,62 +24,88 @@
 // });
 
 // CRUD
-let students = [
-  { id: 2, fullName: "Najmiddinov Nodirbek", age: 20 },
-  { id: 3, fullName: "Yaxyoyev Ashrafxon", age: 19 },
-  { id: 1, fullName: "Tursunmahammatov Khojiakbar", age: 16 },
-  { id: 5, fullName: "Abdullayev Nurullo", age: 22 },
-  { id: 4, fullName: "Abdurhamonov Abdurahim", age: 15 },
-  { id: 6, fullName: "Eshmat", age: 23 },
-];
+// let students = [
+//   { id: 2, fullName: "Najmiddinov Nodirbek", age: 20 },
+//   { id: 3, fullName: "Yaxyoyev Ashrafxon", age: 19 },
+//   { id: 1, fullName: "Tursunmahammatov Khojiakbar", age: 16 },
+//   { id: 5, fullName: "Abdullayev Nurullo", age: 22 },
+//   { id: 4, fullName: "Abdurhamonov Abdurahim", age: 15 },
+//   { id: 6, fullName: "Eshmat", age: 23 },
+// ];
 
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
-const container = document.createElement("div");
-const display = (data) => {
-  data.forEach((v) => {
-    const item = document.createElement("div");
-    item.innerHTML = `${v.id}. ${v.fullName} - ${v.age} yosh`;
-    const deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
-    deleteButton.onclick = () => deleteStudent(v.id);
-    item.append(deleteButton);
-    container.append(item);
-  });
-  body.prepend(container);
+// const container = document.createElement("div");
+// const display = (data) => {
+//   data.forEach((v) => {
+//     const item = document.createElement("div");
+//     item.innerHTML = `${v.id}. ${v.fullName} - ${v.age} yosh`;
+//     const deleteButton = document.createElement("button");
+//     deleteButton.innerText = "Delete";
+//     deleteButton.onclick = () => deleteStudent(v.id);
+//     item.append(deleteButton);
+//     container.append(item);
+//   });
+//   body.prepend(container);
+// };
+// display(students);
+
+// function deleteStudent(id) {
+//   let result = students.filter((s) => s.id !== id);
+//   students = result;
+//   container.innerHTML = "";
+//   display(students);
+// }
+
+// const sortById = document.querySelector("#id");
+// sortById.onclick = () => sortStudentsById(students);
+// function sortStudentsById(data) {
+//   let result = data.sort((a, b) => a.id - b.id);
+//   students = result;
+//   container.innerHTML = "";
+//   display(students);
+// }
+
+// const sortByAge = document.querySelector("#age");
+// sortByAge.onclick = () => sortStudentsByAge(students);
+// function sortStudentsByAge(data) {
+//   let result = data.sort((a, b) => a.age - b.age);
+//   students = result;
+//   container.innerHTML = "";
+//   display(students);
+// }
+
+// const sortByName = document.querySelector("#name");
+// sortByName.onclick = () => sortStudentsByName(students);
+// function sortStudentsByName(data) {
+//   let result = data.sort((a, b) => a.fullName.localeCompare(b.fullName));
+//   students = result;
+//   container.innerHTML = "";
+//   display(students);
+// }
+
+// const one = document.querySelector("#one");
+// const five = document.querySelector("#five");
+// const ten = document.querySelector("#ten");
+
+const buttons = document.querySelectorAll("button");
+
+const getValue = (tag) => {
+  console.log(+tag.target.innerText);
 };
-display(students);
 
-function deleteStudent(id) {
-  let result = students.filter((s) => s.id !== id);
-  students = result;
-  container.innerHTML = "";
-  display(students);
-}
+buttons.forEach((v) => {
+  v.onclick = (e) => getValue(e);
+});
 
-const sortById = document.querySelector("#id");
-sortById.onclick = () => sortStudentsById(students);
-function sortStudentsById(data) {
-  let result = data.sort((a, b) => a.id - b.id);
-  students = result;
-  container.innerHTML = "";
-  display(students);
-}
+// buttons[0].onclick = (e) => {
+//   getValue(e);
+// };
 
-const sortByAge = document.querySelector("#age");
-sortByAge.onclick = () => sortStudentsByAge(students);
-function sortStudentsByAge(data) {
-  let result = data.sort((a, b) => a.age - b.age);
-  students = result;
-  container.innerHTML = "";
-  display(students);
-}
+// buttons[1].onclick = (e) => {
+//   getValue(e);
+// };
 
-const sortByName = document.querySelector("#name");
-sortByName.onclick = () => sortStudentsByName(students);
-function sortStudentsByName(data) {
-  let result = data.sort((a, b) => a.fullName.localeCompare(b.fullName));
-  students = result;
-  container.innerHTML = "";
-  display(students);
-}
+// buttons[2].onclick = (e) => {
+//   getValue(e);
+// };
